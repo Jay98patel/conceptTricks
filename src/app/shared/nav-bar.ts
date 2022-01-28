@@ -5,8 +5,8 @@ export class NavBarList {
         return [
             {
                 id:1,
-                path:'basicConcepts',
-                name: 'Basic Concept'
+                path:'products',
+                name: 'Products'
             }
         ];
     }

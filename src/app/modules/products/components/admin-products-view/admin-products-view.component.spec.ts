@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BasicConceptComponent } from './basic-concept.component';
+import { AdminProductsViewComponent } from './admin-products-view.component';
 
-describe('BasicConceptComponent', () => {
-  let component: BasicConceptComponent;
-  let fixture: ComponentFixture<BasicConceptComponent>;
+describe('AdminProductsViewComponent', () => {
+  let component: AdminProductsViewComponent;
+  let fixture: ComponentFixture<AdminProductsViewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BasicConceptComponent ]
+      declarations: [ AdminProductsViewComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BasicConceptComponent);
+    fixture = TestBed.createComponent(AdminProductsViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
