@@ -41,6 +41,7 @@ export class AdminProductsViewComponent implements OnInit {
     this.productService.saveProduct(product).subscribe((savedProduct) => {
       this.isProductSaveSuccess = true;
       this.hideMessage();
+      this.getProductList();
     },
     (error=>{
       alert("Somethings Went Wrong")

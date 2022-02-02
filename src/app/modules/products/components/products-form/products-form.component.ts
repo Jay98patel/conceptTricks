@@ -37,10 +37,15 @@ export class ProductsFormComponent implements OnInit {
     const productToSave = this.productForm.value;
     if (this.productForm.valid) {
       this.createdProduct.emit(productToSave);
+      this.resetForm();
     }
     else{
       console.log("solve Errors")
     }
+  }
+
+  resetForm(){
+    this.productForm.reset()
   }
 
 
