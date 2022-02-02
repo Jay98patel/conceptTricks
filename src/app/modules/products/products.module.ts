@@ -7,6 +7,7 @@ import { ProductsFormComponent } from './components/products-form/products-form.
 import { AdminProductsViewComponent } from './components/admin-products-view/admin-products-view.component';
 import { ClientProductsViewComponent } from './components/client-products-view/client-products-view.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     ProductsRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ]
 })
 export class ProductsModule { }

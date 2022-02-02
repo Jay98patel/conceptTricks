@@ -1,24 +1,44 @@
 {
-    "category":[
-        {
-            "id": 1,
-            "name": "Mobile"
-        },
-        {
-            "id": 2,
-            "name": "Computer"
-        },
-        {
-            "id": 3,
-            "name": "Home & Kitchen"
-        },
-        {
-            "id": 4,
-            "name": "Electronics"
-        },
-        {
-            "id": 5,
-            "name": "Books"
-        }
-    ]
+  "category": [
+    {
+      "id": 1,
+      "name": "Mobile"
+    },
+    {
+      "id": 2,
+      "name": "Computer"
+    },
+    {
+      "id": 3,
+      "name": "Home & Kitchen"
+    },
+    {
+      "id": 4,
+      "name": "Electronics"
+    },
+    {
+      "id": 5,
+      "name": "Books"
+    }
+  ],
+  "products": [
+    {
+      "productName": "TV",
+      "price": 12,
+      "category": "3",
+      "quantity": 12,
+      "stock": true,
+      "term": false,
+      "id": 1
+    },
+    {
+      "productName": "Samsung",
+      "price": 20000,
+      "category": "4",
+      "quantity": 12,
+      "stock": true,
+      "term": false,
+      "id": 2
+    }
+  ]
 }
