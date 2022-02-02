@@ -1,7 +1,7 @@
 import { Product } from './../models/product.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Category } from '../models/product.model';
 
@@ -10,7 +10,9 @@ import { Category } from '../models/product.model';
 })
 export class ProductsService {
 
-  apiLink: string | undefined;
+  apiLink: string;
+
+  productToEdit: Subject<Product> = new Subject<Product>();
 
   constructor(private http: HttpClient) {
     this.apiLink = environment.baseURL;
@@ -25,7 +27,22 @@ export class ProductsService {
   }
 
   saveProduct(product: Product): Observable<Product> {
-    debugger
-    return this.http.post<Product>(`${this.apiLink}/products/`,product);
+    return this.http.post<Product>(`${this.apiLink}/products/`, product);
+  }
+
+  updateProduct(product: Product): Observable<Product> {
+    return this.http.put<Product>(`${this.apiLink}/products/${product.id}`, product);
+  }
+
+  sendProductToEdit(product:Product){
+    this.productToEdit.next(product);
+  }
+
+  getProductToEdit():Observable<Product>{
+    return this.productToEdit.asObservable();
+  }
+
+  deleteProduct(id:number):Observable<number>{
+    return this.http.delete<number>(`${this.apiLink}/products/${id}`);
   }
 }

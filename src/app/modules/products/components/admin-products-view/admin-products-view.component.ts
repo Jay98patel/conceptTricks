@@ -38,6 +38,15 @@ export class AdminProductsViewComponent implements OnInit {
   }
 
   saveProduct(product: Product) {
+    debugger
+    if(product.id){
+      this.updateProduct(product)
+    }else{
+      this.createProduct(product)
+    }
+  }
+  
+  createProduct(product:Product){
     this.productService.saveProduct(product).subscribe((savedProduct) => {
       this.isProductSaveSuccess = true;
       this.hideMessage();
@@ -46,6 +55,25 @@ export class AdminProductsViewComponent implements OnInit {
     (error=>{
       alert("Somethings Went Wrong")
     }));
+  }
+
+  updateProduct(product:Product){
+    this.productService.updateProduct(product).subscribe((savedProduct) => {
+      this.isProductSaveSuccess = true;
+      this.hideMessage();
+      this.getProductList();
+    },
+    (error=>{
+      alert("Somethings Went Wrong")
+    }));
+  }
+
+  deleteProduct(id:number){
+    debugger
+    this.productService.deleteProduct(id).subscribe((deletedProductId:number)=>{
+      console.log("Product Deleted successfully");
+      this.getProductList();
+    })
   }
 
   hideMessage(){

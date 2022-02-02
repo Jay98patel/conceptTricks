@@ -21,42 +21,5 @@
       "name": "Books"
     }
   ],
-  "products": [
-    {
-      "productName": "TV",
-      "price": 12,
-      "category": "3",
-      "quantity": 12,
-      "stock": true,
-      "term": false,
-      "id": 1
-    },
-    {
-      "productName": "Samsung",
-      "price": 20000,
-      "category": "4",
-      "quantity": 12,
-      "stock": true,
-      "term": false,
-      "id": 2
-    },
-    {
-      "productName": "I phone ",
-      "price": 200,
-      "category": "3",
-      "quantity": 122,
-      "stock": true,
-      "term": true,
-      "id": 3
-    },
-    {
-      "productName": "Oneplus",
-      "price": 200,
-      "category": "1",
-      "quantity": 100,
-      "stock": true,
-      "term": true,
-      "id": 4
-    }
-  ]
+  "products": []
 }

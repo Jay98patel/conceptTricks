@@ -15,8 +15,8 @@
             <td>{{product.price}}</td>
             <td>{{product.category}}</td>
             <td>
-                <i class="fas fa-edit me-2"></i>
-                <i class="fas fa-trash-alt "></i>
+                <i class="fas fa-edit me-2" (click)="editProduct(product)"></i>
+                <i class="fas fa-trash-alt"  (click)="deleteProduct(product.id)"></i>
             </td>
         </tr>
     </tbody>

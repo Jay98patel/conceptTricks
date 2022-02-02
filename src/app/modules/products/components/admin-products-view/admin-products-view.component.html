@@ -1,11 +1,11 @@
 <div class="d-flex justify-content-around m-3">
     <div class="w-50">
-        <app-products-form [categories]="categoryOptions" (createdProduct)="saveProduct($event)"></app-products-form>
+        <app-products-form [categories]="categoryOptions" (createdProduct)="saveProduct($event)" ></app-products-form>
         <div class="alert alert-success mt-2" *ngIf="isProductSaveSuccess">
             Saved Successfully
         </div>
     </div>
     <div class="w-50">
-        <app-products-list [productList]="products"></app-products-list>
+        <app-products-list [productList]="products" (productToDelete)="deleteProduct($event)" ></app-products-list>
     </div>
 </div>

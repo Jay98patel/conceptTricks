@@ -1,5 +1,6 @@
 import { Product } from './../../models/product.model';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-products-list',
@@ -10,9 +11,22 @@ export class ProductsListComponent implements OnInit {
 
   @Input() productList: Product[];
 
-  constructor() { }
+  @Output() productToEdit: EventEmitter<Product> = new EventEmitter<Product>();
+  @Output() productToDelete: EventEmitter<number> = new EventEmitter<number>();
+
+
+  constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
   }
+
+  editProduct(productToEdit: Product) {
+    this.productService.sendProductToEdit(productToEdit);
+  }
+
+  deleteProduct(id:number){
+    this.productToDelete.emit(id);
+  }
+
 
 }
