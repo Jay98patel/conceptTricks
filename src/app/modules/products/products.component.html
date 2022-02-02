@@ -1,7 +1,6 @@
 <div>
     <div class="text-end m-3">
-        <button type="button" class="btn btn-primary" *ngIf="isAdminView" (click)="changeButtonName()"
-            [routerLink]="pathName">{{buttonName}}</button>
+        <button type="button" class="btn btn-primary"  (click)="changeButtonName()">{{buttonName}}</button>
     </div>
     <div>
         <router-outlet></router-outlet>

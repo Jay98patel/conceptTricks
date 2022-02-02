@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-basic-concept',
@@ -11,7 +12,7 @@ export class ProductComponent implements OnInit {
   pathName: string = "adminView";
   isAdminView: boolean = true;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -20,11 +21,13 @@ export class ProductComponent implements OnInit {
     debugger
     this.isAdminView = !this.isAdminView;
     if (this.isAdminView) {
-      this.pathName = "clientView";
-      this.buttonName = "Switch To Admin View";
-    } else {
-      this.pathName = "adminView";
+      // this.pathName = "clientView";
       this.buttonName = "Switch To Client View";
+      this.router.navigate(['products/adminView']);
+    } else {
+      this.buttonName = "Switch To Admin View";
+      this.router.navigate(['products/clientView']);
+      // this.pathName = "adminView";
     }
   }
 
