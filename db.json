@@ -1,0 +1,24 @@
+{
+    "category":[
+        {
+            "id": 1,
+            "name": "Mobile"
+        },
+        {
+            "id": 2,
+            "name": "Computer"
+        },
+        {
+            "id": 3,
+            "name": "Home & Kitchen"
+        },
+        {
+            "id": 4,
+            "name": "Electronics"
+        },
+        {
+            "id": 5,
+            "name": "Books"
+        }
+    ]
+}

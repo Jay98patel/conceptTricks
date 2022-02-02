@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Category } from './../../models/product.model';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-products-form',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products-form.component.scss']
 })
 export class ProductsFormComponent implements OnInit {
+
+  @Input() categories: Category[] | undefined;
 
   constructor() { }
 

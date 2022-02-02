@@ -10,6 +10,7 @@ export class ProductComponent implements OnInit {
 
   buttonName: string = "Switch To Client View";
   pathName: string = "adminView";
+
   isAdminView: boolean = true;
 
   constructor(private router: Router) { }
@@ -18,17 +19,13 @@ export class ProductComponent implements OnInit {
   }
 
   changeButtonName() {
-    debugger
     this.isAdminView = !this.isAdminView;
     if (this.isAdminView) {
-      // this.pathName = "clientView";
       this.buttonName = "Switch To Client View";
       this.router.navigate(['products/adminView']);
     } else {
       this.buttonName = "Switch To Admin View";
       this.router.navigate(['products/clientView']);
-      // this.pathName = "adminView";
     }
   }
-
 }

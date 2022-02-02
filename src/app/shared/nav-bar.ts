@@ -7,6 +7,11 @@ export class NavBarList {
                 id:1,
                 path:'products',
                 name: 'Products'
+            },
+            {
+                id:2,
+                path:'clients',
+                name: 'Clients'
             }
         ];
     }

@@ -1,1 +1,48 @@
-<p>products-form works!</p>
+<form>
+    <div class="mb-3 d-flex">
+        <label for="productName" class="form-label w-25 me-3">Product Name:</label>
+        <div>
+            <input type="text" class="form-control" id="productName" placeholder="Product Name">
+            <div *ngIf="false" id="emailHelp" class="form-text">Error Message</div>
+        </div>
+    </div>
+    <div class="mb-3 d-flex">
+        <label for="price" class="form-label w-25 me-3">Price:</label>
+        <div>
+            <input type="number" class="form-control" id="price" placeholder="Price">
+            <div *ngIf="false" id="emailHelp" class="form-text">Error Message</div>
+        </div>
+    </div>
+    <div class="mb-3 d-flex">
+        <label for="category" class="form-label w-25 me-3">Category:</label>
+        <div>
+            <select class="form-select">
+                <option selected disabled>Open this select menu</option>
+                <option *ngFor="let categorie of categories" [value]="categorie.id"> {{categorie.name}}</option>
+            </select>
+            <div *ngIf="false" id="emailHelp" class="form-text">Error Message</div>
+        </div>
+    </div>
+    <div class="mb-3 d-flex">
+        <label for="quantity" class="form-label w-25 me-3">Quantity:</label>
+        <div>
+            <input type="number" class="form-control" id="quantity" placeholder="Quantity">
+            <div *ngIf="false" id="emailHelp" class="form-text">Error Message</div>
+        </div>
+    </div>
+    <div class="mb-3 d-flex">
+        <label for="inStaock" class="form-label w-25 me-3">In Stock ?</label>
+            <div class="form-check me-2">
+                <input class="form-check-input" type="radio" name="stock" id="yes">
+                <label class="form-check-label" for="yes">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="stock" id="no">
+                <label class="form-check-label" for="no">
+                    No
+                </label>
+            </div>
+    </div>
+</form>

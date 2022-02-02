@@ -1,4 +1,6 @@
+import { Category } from './../../models/product.model';
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-admin-products-view',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminProductsViewComponent implements OnInit {
 
-  constructor() { }
+  categoryOptions: Category[] | undefined;
+
+  constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
+    this.getCategoryOptions();
+  }
+ 
+
+  getCategoryOptions() {
+    this.productService.getCategory().subscribe((categoryOption: Category[]) => {
+      this.categoryOptions = categoryOption;
+    });
   }
 
 }

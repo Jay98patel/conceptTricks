@@ -6,7 +6,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { ProductsFormComponent } from './components/products-form/products-form.component';
 import { AdminProductsViewComponent } from './components/admin-products-view/admin-products-view.component';
 import { ClientProductsViewComponent } from './components/client-products-view/client-products-view.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { ClientProductsViewComponent } from './components/client-products-view/c
   ],
   imports: [
     CommonModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    HttpClientModule
   ]
 })
 export class ProductsModule { }
